@@ -1,0 +1,81 @@
+$color1: #202023;
+$color1-50: rgba(20, 20, 23, .5);
+$color2: rgb(71, 71, 212);
+$color2-50: rgba(71, 71, 212, .5);
+$color3: rgb(255, 0, 0);
+$color3-50: rgba(255, 0, 0, .5);
+$color4: rgb(0, 136, 0);
+$color4-50: rgba(0, 136, 0, .5);
+$textColor1:whitesmoke;
+$textColor2: grey;
+
+@import 'animations';
+@import 'board';
+@import 'timer';
+@import 'configPopup';
+@import 'winnerPopup';
+
+body{
+	
+	font-family: 'Montserrat', sans-serif;
+	background-color: $color1;
+	box-sizing: border-box;
+	overflow: hidden;
+	i{
+		cursor: pointer;
+		color: $color3-50;
+		&:hover{
+			color: $color4-50;
+		}
+		&:active{
+			 color: $color4;
+		}
+	}
+	
+	>div.pasapalabraBoard{
+		box-sizing: border-box;
+		font-family: 'Montserrat', sans-serif;
+		display: flex;
+		flex-flow: row;
+		justify-content:center;
+		align-items: center;
+		flex-wrap: wrap;
+		background-color: $color1;
+		color:$textColor1;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		.inactivePlayers{
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content:center;
+			align-items: center;
+			align-content: flex-start;
+			
+			overflow: auto;
+			width: 20%;
+			height: 100%;
+			padding: 2%;
+			>div{
+				width: 100%;			
+			}
+		}
+		.activePlayer{
+			width: 80%;
+			height: 100%;
+			box-sizing: border-box;
+			display:flex;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			padding: 2%;
+			.playerAvatar{
+				position: inherit;
+			}
+		}
+	}
+	
+}
+

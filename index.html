@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="popup avatarPopup">
+        <h3>Introduce la URL:</h3>
+        <div>
+            <input class="configAvatar" type="text">
+            <i class="bi bi-check-lg"></i>
+        </div>
+        <div class="avatarPicker">
+            <img src="https://4.bp.blogspot.com/-oyIQrz5MgfU/W563ftDPG4I/AAAAAAAABTo/Jr7hdDFlADkt3nxWMALEVrUBgjZ6CZLBQCLcBGAs/s400/Articuno_XY.gif" alt="">
+            <img src="http://pa1.narvii.com/6141/7d80cbc0e114c5c96e6f7b0edf31f0a8cc7d1a32_00.gif" alt="">
+            <img src="https://bogleech.com/pokemon/sprites/715.gif" alt="">
+            <img src="https://1.bp.blogspot.com/-GQa8o-brIlA/UrSvPnciV2I/AAAAAAAADrY/914kjQtTD4U/s1600/talonflame-3.gif" alt="">
+            <img src="https://www.gifss.com/comics/pokemon/images/gif-pokemon-73.gif" alt="">
+            <img src="https://www.pkparaiso.com/imagenes/xy/sprites/animados/charizard-3.gif" alt="">
+            <img src="https://www.pkparaiso.com/imagenes/xy/sprites/animados-shiny/talonflame.gif" alt="">
+            <img src="https://www.pkparaiso.com/imagenes/xy/sprites/animados/lapras-3.gif" alt="">
+            <img src="https://files.pokefans.net/sprites/xy/animationen/gengar.gif" alt="">
+            <img src="https://files.pokefans.net/sprites/xy/animationen/697-3.gif" alt="">
+        </div>
+    </div>
+
+    <div class="configPopup popup">
+        <h3>Nombre del jugador:</h3>
+        <div>
+            <input class="playerName" type="text">
+            <i class="bi bi-person-plus-fill"></i>
+        </div>
+
+        <ul></ul>
+
+        <div>
+            <h3>Tiempo:</h3>
+            <input class="gameTime" type="number" value="20" min="20" max="300">
+        </div>
+        <div>
+            <h3>Obviar tildes </h3>
+            <input class="tildes" type="checkbox" value="tildes">
+        </div>
+
+        <button>Iniciar</button>
+    </div>
+    <div class="generalRanking popup">
+        <h1></h1>
+        <ul></ul>
+    </div>
+    <div class="pasapalabraBoard">
+        <div class="activePlayer"></div>
+        <div class="inactivePlayers"></div>
+    </div>
+
+    <script src="js/QuestionsLib.js"></script>
+    <script src="js/Question.js"></script>
+    <script src="js/Timer.js"></script>
+    <script src="js/QuestionsBoard.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Pasapalabra.js"></script>
+    <script src="js/config.js"></script>
+    <script>
+
+       /* 
+        let config = { time: null, players: [], maxPlayersAllowed: QuestionsLib.maxPlayersAllowed() };
+        let configPopup = document.body.getElementsByClassName('configPopup')[0];
+        let avatarPopup = document.body.getElementsByClassName('avatarPopup')[0];
+        avatarPopup.getElementsByTagName('i')[0].addEventListener('click', _ => {
+            let value = avatarPopup.getElementsByTagName('input')[0].value;
+            if (value) {
+                config.players[avatarPopup.dataset.player].avatar = `<img src="${value}" alt="">`;
+            }
+            avatarPopup.style.display = 'none';
+            configPopup.style.display = 'flex';
+        });
+        let avatarPicker = document.body.getElementsByClassName('avatarPicker')[0];
+        avatarPicker.addEventListener('click',(e)=>{
+            avatarPopup.getElementsByTagName('input')[0].value = e.target.src;
+        });
+        let [nombre, tiempo, tildes] = configPopup.getElementsByTagName('input');
+        let lista = configPopup.getElementsByTagName('ul')[0];
+        lista.addEventListener('click', (e) => {
+            if (e.target.classList.contains('bi-person-bounding-box')) {
+                configPopup.style.display = 'none';
+                avatarPopup.style.display = 'flex';
+                avatarPopup.dataset.player = e.target.dataset.player;
+            }
+        });
+
+        configPopup.querySelector('i.bi-person-plus-fill').addEventListener('click', _ => {
+            if(config.players.length >= config.maxPlayersAllowed){
+                alert(`Las palabras que hay dan para ${config.maxPlayersAllowed} jugadores, no hay más.`);
+            }else if (nombre.value && !checkIfNameExist(config.players,nombre.value)) {
+                let row = document.createElement('li');
+                row.innerHTML = `<h2>${nombre.value}<h2><i class="bi bi-person-bounding-box" data-player="${config.players.length}"></i>`;
+                lista.append(row);
+                let player = {};
+                player.name = nombre.value;
+                player.avatar = `<p>${nombre.value}</p>`;
+                config.players.push(player);
+                nombre.value = null;
+            }
+        });
+
+        configPopup.getElementsByTagName('button')[0].addEventListener('click', _ => {
+            if (tiempo.value && tiempo.value > 0 && config.players.length > 0) {
+                config.time = tiempo.value;
+                config.accents = tildes.checked;
+                configPopup.style.display = 'none';
+                new PasaPalabra(config).init();
+            }
+        });
+
+
+        function checkIfNameExist(players,playerName){
+            if(players.length>0)
+                return Array.from(players,player=>{return player.name}).includes(playerName);
+            return false;
+        } */
+
+    </script>
+</body>
+
+</html>

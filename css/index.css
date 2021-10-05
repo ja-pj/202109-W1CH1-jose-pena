@@ -1,0 +1,654 @@
+@keyframes activeLetter {
+  0% {
+    box-shadow: 0px 0px 10px 5px #4747d4;
+    background: #4747d4;
+  }
+  50% {
+    box-shadow: 0px 0px 0px 0px #4747d4;
+    background: #202023;
+  }
+  100% {
+    box-shadow: 0px 0px 10px 5px #4747d4;
+    background: #4747d4;
+  }
+}
+
+.playerAvatar {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: xxx-large;
+}
+
+.playerAvatar p {
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.playerAvatar img {
+  border-radius: 50%;
+  width: 75%;
+  height: 75%;
+}
+
+.playerAvatar.active {
+  width: 20%;
+}
+
+.questionsBoard {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.questionsBoard.active {
+  width: 80%;
+  background: radial-gradient(#4747d4, 40%, #202023, 90%, #202023);
+}
+
+.questionsBoard.active .questionLetter.active {
+  animation: activeLetter 1s infinite linear;
+}
+
+.questionsBoard.active .statsWrapper > .currentQuestion {
+  visibility: visible;
+  display: flex;
+}
+
+.questionsBoard.active .playerAvatar {
+  display: none;
+}
+
+.questionsBoard.showAnswer .statsWrapper {
+  display: none;
+}
+
+.questionsBoard.showAnswer .answer {
+  display: flex;
+}
+
+.answer {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  display: none;
+  flex-flow: column;
+  justify-content: space-around;
+  border-radius: 50%;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: whitesmoke;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.questionsWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.questionsWrapper .questionLetter {
+  position: absolute;
+  top: calc(50% - 4%);
+  left: calc(50% - 4%);
+  width: 8%;
+  height: 8%;
+  background: radial-gradient(#4747d4, 50%, rgba(71, 71, 212, 0.5), 90%, rgba(71, 71, 212, 0.5));
+  border-radius: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  color: whitesmoke;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: rotate(var(--a, 0deg)) translate(550%) rotate(calc(var(--a,0deg)*-1));
+  box-shadow: 0px 0px 5px 2px #4747d4;
+  text-shadow: 5px 2px 2px #202023;
+}
+
+.questionsWrapper .questionLetter:nth-child(8) {
+  --a: 363.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(7) {
+  --a: 350.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(6) {
+  --a: 336.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(5) {
+  --a: 323.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(4) {
+  --a: 310.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(3) {
+  --a: 296.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(2) {
+  --a: 283.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(1) {
+  --a: 270.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(27) {
+  --a: 256.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(26) {
+  --a: 243.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(25) {
+  --a: 230.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(24) {
+  --a: 216.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(23) {
+  --a: 203.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(22) {
+  --a: 190.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(21) {
+  --a: 176.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(20) {
+  --a: 163.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(19) {
+  --a: 150.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(18) {
+  --a: 136.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(17) {
+  --a: 123.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(16) {
+  --a: 110.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(15) {
+  --a: 96.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(14) {
+  --a: 83.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(13) {
+  --a: 70.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(12) {
+  --a: 56.66673deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(11) {
+  --a: 43.3334deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(10) {
+  --a: 30.00007deg;
+}
+
+.questionsWrapper .questionLetter:nth-child(9) {
+  --a: 16.66673deg;
+}
+
+.questionsWrapper .questionLetter.right {
+  background: radial-gradient(#008800, 50%, rgba(0, 136, 0, 0.5), 90%, rgba(0, 136, 0, 0.5));
+  box-shadow: 0px 0px 5px 2px #008800;
+}
+
+.questionsWrapper .questionLetter.wrong {
+  background: radial-gradient(red, 50%, rgba(255, 0, 0, 0.5), 90%, rgba(255, 0, 0, 0.5));
+  box-shadow: 0px 0px 5px 2px red;
+}
+
+.statsWrapper {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  border-radius: 50%;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: whitesmoke;
+}
+
+.statsWrapper .currentQuestion {
+  width: 90%;
+  height: 60%;
+  text-align: center;
+  font-size: xxx-large;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: overlay;
+  overflow-wrap: normal;
+  display: none;
+  visibility: hidden;
+}
+
+.questionsBoard.active > .statsWrapper > .currentQuestion {
+  font-size: x-large;
+}
+
+.currentQuestion > p {
+  overflow: overlay;
+  overflow-wrap: normal;
+  padding: 0% 5%;
+}
+
+.currentQuestion > input {
+  padding: 5px;
+  font-size: x-large;
+  border-width: 0 0 3px 0;
+  background-color: transparent;
+  color: whitesmoke;
+  text-align: center;
+  width: 60%;
+}
+
+.currentQuestion > input:focus {
+  border-width: 0 0 3px 0;
+}
+
+.timer {
+  box-sizing: border-box;
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  background: #4747d4;
+  top: 80%;
+  left: 0%;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px 0 1px 1px solid whitesmoke;
+  background: radial-gradient(#4747d4, 40%, #202023, 95%, #202023);
+}
+
+.score {
+  box-sizing: border-box;
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  background: #4747d4;
+  top: 88%;
+  left: 7%;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#008800, 40%, #202023, 95%, #202023);
+}
+
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  border: solid green 1px;
+}
+
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: red;
+  border-radius: 100%;
+}
+
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: #4158d0;
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circular .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.circle .left .progress {
+  z-index: 1;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circle .right {
+  transform: rotate(180deg);
+  z-index: 3;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 1%;
+  width: 20%;
+  min-width: 200px;
+  max-height: 60%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(71, 71, 212, 0.5);
+  color: whitesmoke;
+  border-radius: 10px;
+  border: 3px solid #4747d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: none;
+}
+
+.popup > h3 {
+  color: whitesmoke;
+  font-size: x-large;
+  width: 100%;
+  margin: 0;
+}
+
+.popup > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.popup > div > input.playerName, .popup > div > input.configAvatar {
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: xx-large;
+  border-width: 0 0 3px 0;
+  background-color: transparent;
+  color: whitesmoke;
+  text-align: left;
+}
+
+.popup > div > input.playerName:focus-visible, .popup > div > input.configAvatar:focus-visible {
+  outline: none;
+}
+
+.popup > div > i {
+  font-size: xx-large;
+}
+
+.popup > div.avatarPicker {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+
+.popup > div.avatarPicker img {
+  aspect-ratio: 1;
+  width: 20%;
+}
+
+.popup > div:nth-of-type(2), .popup > div:nth-of-type(3) {
+  justify-content: center;
+}
+
+.popup > div:nth-of-type(2) > h3, .popup > div:nth-of-type(3) > h3 {
+  font-size: x-large;
+  margin: 1% 0;
+  margin-right: 1%;
+}
+
+.popup > div:nth-of-type(2) > input.gameTime, .popup > div:nth-of-type(3) > input.gameTime {
+  width: 20%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: x-large;
+  background-color: transparent;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.popup > div:nth-of-type(2) > input.gameTime:focus-visible, .popup > div:nth-of-type(3) > input.gameTime:focus-visible {
+  outline: none;
+}
+
+.popup > div:nth-of-type(2) > input.tildes, .popup > div:nth-of-type(3) > input.tildes {
+  color: whitesmoke;
+  background-color: transparent;
+  transform: scale(2);
+  margin-left: 5%;
+}
+
+.popup > ul {
+  list-style: none;
+  margin: 5% 0;
+  padding: 0;
+  overflow: auto;
+  background: rgba(20, 20, 23, 0.5);
+  font-size: x-large;
+  width: 100%;
+  height: 60%;
+}
+
+.popup > ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 5%;
+  height: 2em;
+}
+
+.popup > ul li h2 {
+  margin: 0;
+}
+
+.popup > ul li:nth-of-type(odd) {
+  background-color: rgba(20, 20, 23, 0.5);
+}
+
+.popup > ul li img {
+  height: 100%;
+}
+
+.popup > button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: rgba(20, 20, 23, 0.5);
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,  transform 150ms ease;
+  width: 50%;
+  margin-top: 3%;
+}
+
+.popup > button:hover, .popup > button:focus {
+  background: #202023;
+}
+
+.popup > button:focus {
+  outline: 1px solid #4747d4;
+  outline-offset: -4px;
+}
+
+.popup > button:active {
+  transform: scale(0.99);
+}
+
+.configPopup {
+  display: flex;
+}
+
+.avatarPopup {
+  display: none;
+}
+
+.winnerPopup {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: none;
+  overflow: auto;
+  z-index: 5;
+  background: #202023;
+}
+
+.winnerPopup > div {
+  max-width: 500px;
+  min-width: 300px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #202023;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body i {
+  cursor: pointer;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+body i:hover {
+  color: rgba(0, 136, 0, 0.5);
+}
+
+body i:active {
+  color: #008800;
+}
+
+body > div.pasapalabraBoard {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #202023;
+  color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body > div.pasapalabraBoard .inactivePlayers {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  overflow: auto;
+  width: 20%;
+  height: 100%;
+  padding: 2%;
+}
+
+body > div.pasapalabraBoard .inactivePlayers > div {
+  width: 100%;
+}
+
+body > div.pasapalabraBoard .activePlayer {
+  width: 80%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+body > div.pasapalabraBoard .activePlayer .playerAvatar {
+  position: inherit;
+}
+/*# sourceMappingURL=index.css.map */
